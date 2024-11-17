@@ -212,11 +212,8 @@
 
 
 
-
-
-
-
 .reviews {
+  overflow: hidden;
 
   &__title-row {
     margin-bottom: 20px;
@@ -401,6 +398,7 @@
     }
     &__media {
       display: flex;
+      flex-wrap: wrap;
       gap: 10px;
       img {
         width: 100px;
@@ -507,12 +505,6 @@
   }
 
 }
-
-
-
-
-
-
 
 
 
