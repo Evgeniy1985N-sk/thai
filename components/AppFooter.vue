@@ -1,5 +1,5 @@
 <style lang="scss" scoped>
-   @import '/assets/footer.scss';
+   @use '@/assets/footer.scss';
 </style>
 
 <template>

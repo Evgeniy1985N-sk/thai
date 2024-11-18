@@ -96,10 +96,56 @@ img {
 }
 
 
+.tag-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  &__name {
+      padding: 4px 12px;
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 8px;
+      line-height: 140%;
+      text-transform: uppercase;
+      border: 1px solid rgba(221, 198, 28, 0.3);
+      border-radius: 100px;
+  }
 
+@media (min-width: breakpoints.$md) {
+  &__name {
+    padding: 6px 20px;
+    font-size: 10px;
+  }
+}
+}
 
+.title-row {
+  &__info {
+      display: none;
+  }
 
-/* components */
+  @media (min-width: breakpoints.$md) {
+      display: grid;
+      grid-template-columns: 1fr 5fr;
+      gap: 10px;
+      &__info {
+          display: block;
+    text-transform: uppercase;
+          color: var(--c-meteorite-400);
+          font-size: 12px;
+      }
+  }
+
+  @media (min-width: breakpoints.$xl) {
+      &__info {
+          font-size: 16px;
+      }
+  }
+
+  @media (min-width: breakpoints.$xxxl) {
+    grid-template-columns: 1fr 3fr;
+  }
+}
 
 .button {
     position: relative;
@@ -128,105 +174,4 @@ img {
         background: var(--c-yellow-400);
         border-radius: var(--border-radius-3xl);
     }
-}
-
-.tag-box {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    &__name {
-        padding: 4px 12px;
-        font-family: var(--font-family);
-        font-weight: 500;
-        font-size: 8px;
-        line-height: 140%;
-        text-transform: uppercase;
-        border: 1px solid rgba(221, 198, 28, 0.3);
-        border-radius: 100px;
-    }
-
-  @media (min-width: breakpoints.$md) {
-    &__name {
-			padding: 6px 20px;
-			font-size: 10px;
-		}
-  }
-}
-
-
-.title-row {
-    &__info {
-        display: none;
-    }
-
-    @media (min-width: breakpoints.$md) {
-        display: grid;
-        grid-template-columns: 1fr 5fr;
-        gap: 10px;
-        &__info {
-            display: block;
-			text-transform: uppercase;
-            color: var(--c-meteorite-400);
-            font-size: 12px;
-        }
-    }
-
-    @media (min-width: breakpoints.$xl) {
-        &__info {
-            font-size: 16px;
-        }
-    }
-
-    @media (min-width: breakpoints.$xxxl) {
-      grid-template-columns: 1fr 3fr;
-    }
-}
-
-
-.about {
-  margin-top: calc(-1 * var(--border-radius-3xl));
-  padding: 40px 0 60px;
-  border-top-right-radius: var(--border-radius-3xl);
-  border-top-left-radius: var(--border-radius-3xl);
-  background: #fff;
-
-  &__grid {
-    display: grid;
-    gap: 10px;
-  }
-
-  &__dsc {
-    color: var(--c-lilac-400);
-    font-weight: 500;
-    text-transform: uppercase;
-  }
-
-  &__text {
-    display: grid;
-    gap: 8px;
-  }
-
-  @media (min-width: breakpoints.$md) {
-    margin-top: calc(-1 * var(--border-radius-4xl));
-    padding: 50px 0 70px;
-    border-top-right-radius: var(--border-radius-4xl);
-    border-top-left-radius: var(--border-radius-4xl);
-    &__grid {
-      gap: 20px;
-    }
-    &__dsc {
-      font-size: 20px;
-      span {
-        display: block;
-        max-width: var(--custom-width);
-        margin-left: auto;
-      }
-    }
-
-    &__text {
-      max-width: var(--custom-width);
-      margin-left: auto;
-    }
-  }
-
 }

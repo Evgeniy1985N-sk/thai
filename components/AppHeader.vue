@@ -1,5 +1,5 @@
 <style lang="scss" scoped>
-   @import '/assets/header.scss';
+   @use '@/assets/header.scss';
 </style>
 
 <template>

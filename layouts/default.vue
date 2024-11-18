@@ -1,7 +1,3 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
   <div class="page">
       <AppHeader />
@@ -11,7 +7,3 @@
       <AppFooter />
   </div>
 </template>
-
-<style lang="scss">
-  @use "@/assets/index";
-</style>
