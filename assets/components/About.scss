@@ -1,0 +1,63 @@
+@use '/assets/breakpoints.scss';
+
+
+
+.about {
+  margin-top: calc(-1 * var(--border-radius-3xl));
+  padding: 40px 0 30px;
+  border-top-right-radius: var(--border-radius-3xl);
+  border-top-left-radius: var(--border-radius-3xl);
+  background: #fff;
+
+  &__grid {
+    display: grid;
+    gap: 10px;
+  }
+
+  &__dsc {
+    color: var(--c-lilac-400);
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    display: grid;
+    gap: 8px;
+  }
+
+  @media (min-width: breakpoints.$md) {
+    margin-top: calc(-1 * var(--border-radius-4xl));
+    padding: 50px 0 70px;
+    border-top-right-radius: var(--border-radius-4xl);
+    border-top-left-radius: var(--border-radius-4xl);
+
+    &__grid {
+      gap: 20px;
+    }
+    &__dsc {
+      font-size: 20px;
+      p {
+        max-width: 1000px;
+        margin-inline: auto;
+      }
+      span {
+        display: block;
+        max-width: var(--custom-width);
+        margin-left: auto;
+      }
+    }
+
+    &__text {
+      max-width: var(--custom-width);
+      margin-left: auto;
+    }
+  }
+
+  @media (min-width: breakpoints.$xl) {
+    margin-top: calc(-1 * var(--border-radius-5xl));
+    border-top-right-radius: var(--border-radius-5xl);
+    border-top-left-radius: var(--border-radius-5xl);
+    padding: 80px 0 60px;
+  }
+
+}

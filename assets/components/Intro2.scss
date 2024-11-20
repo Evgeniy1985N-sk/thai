@@ -1,0 +1,20 @@
+@use '/assets/breakpoints.scss';
+
+
+
+.intro {
+  min-height: 350px;
+  background-image: url('/assets/images/intro-image-island.jpg');
+  background-position: -120px 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media (min-width: breakpoints.$md) {
+    background-position: center;
+  }
+
+  @media (min-width: breakpoints.$lg) {
+    min-height: 610px;
+  }
+
+}

@@ -1,0 +1,46 @@
+@use '/assets/breakpoints.scss';
+
+
+
+.faq {
+  &__items {
+    display: grid;
+    gap: 10px;
+  }
+  &-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 260px;
+    border: 1px solid rgba(46, 29, 114, 0.7);
+    border-radius: 20px;
+    padding: 20px;
+    &__title {
+      font-weight: 500;
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+  }
+
+  @media (min-width: breakpoints.$md) {
+    &__items {
+      grid-template-columns: 1fr 1fr;
+    }
+    &-item {
+      min-height: 260px;
+    }
+  }
+
+  @media (min-width: breakpoints.$xl) {
+    &__items {
+      grid-template-columns: repeat(3,1fr);
+      gap: 20px;
+      max-width: var(--custom-width);
+      margin-left: auto;
+    }
+    &-item {
+      gap: 20px;
+    }
+  }
+
+}

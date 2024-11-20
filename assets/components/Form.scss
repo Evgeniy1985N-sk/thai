@@ -1,0 +1,170 @@
+@use '/assets/breakpoints.scss';
+
+
+
+.form {
+  &-section {
+   border-radius: var(--border-radius-2xl) var(--border-radius-2xl) 0 0;
+   background: var(--c-meteorite-400);
+   &__title {
+     font-size: 46px;
+     line-height: 100%;
+     text-align: left;
+     color: #F8F8FC;
+   }
+   &__text {
+     margin-top: 6px;
+     font-weight: 300;
+     font-size: 14px;
+     text-transform: uppercase;
+     color: #F8F8FC;
+   }
+   &__form {
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+     margin-top: 14px;
+   }
+  }
+   &-input {
+     width: 100%;
+     height: 50px;
+     padding: 0px 16px;
+     border-radius: var(--border-radius-3xl);
+     &::placeholder {
+       font-weight: 400;
+       font-size: 16px;
+       color: #55595a;
+     }
+   }
+ 
+   @media (min-width: breakpoints.$md) {
+     &-section {
+       border-radius: var(--border-radius-4xl) var(--border-radius-4xl) 0 0;
+       overflow: hidden;
+       &__inner {
+         position: relative;
+         max-width: 640px;
+         margin-inline: auto;
+         &:before {
+           content: "";
+           position: absolute;
+           bottom: -52px;
+           left: -259px;
+           width: 240px;
+           height: 404px;
+           background: url("/assets/images/form-img-1.png") center/contain no-repeat;
+         }
+         &:after {
+           content: "";
+           position: absolute;
+           bottom: -8px;
+           right: -275px;
+           width: 262px;
+           height: 225px;
+           background: url("/_nuxt/assets/images/form-img-2.png") center/contain no-repeat;
+         }
+       }
+       &__title {
+         font-size: 76px;
+       }
+       &__text {
+         font-size: 24px;
+       }
+       &__form {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         margin-top: 30px;
+       }
+       &__button {
+         grid-column: 2 span;
+       }
+     }
+   }
+ 
+   @media (min-width: breakpoints.$xxl) {
+     &-section {
+       &__inner {
+         &:before {
+           bottom: -36px;
+           left: -336px;
+           width: 308px;
+           height: 404px;
+         }
+         &:after {
+           bottom: -36px;
+           right: -390px;
+           width: 397px;
+           height: 335px;
+         }
+       }
+     }
+   }
+ 
+   @media (min-width: breakpoints.$xxl) {
+     &-section {
+       &__inner {
+         &:after {
+           right: -410px;
+         }
+       }
+       &__title {
+         font-size: 96px;
+       }
+     }
+   }
+ 
+} 
+
+.check {
+	display: flex;
+	align-items: center;
+  gap: 4px;
+}
+.check__input {
+	position: absolute;
+	z-index: -1;
+	width: 0;
+	height: 0;
+	opacity: 0;
+	&:checked {
+		~ {
+			.check__square {
+				&:after {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+.check__square {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-shrink: 0;
+	width: 10px;
+	height: 10px;
+	border: 1px solid #C2D1D9;
+  background: #F8F8FC;
+  border-radius: 2px;
+	&:after {
+		content: "✔";
+		display: block;
+		margin-top: -4px;
+		opacity: 0;
+		transition: .2s;
+	}
+}
+.check__text {
+  font-size: 12px;
+	color: #938BB7;
+	user-select: none;
+  a {
+    text-decoration: underline;
+  }
+}
+.check_error {
+	.check__square {
+		border-color: var(--c-error);
+	}
+}

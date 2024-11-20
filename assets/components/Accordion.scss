@@ -1,0 +1,154 @@
+@use '/assets/breakpoints.scss';
+
+
+
+.accordion {
+  
+  &__wrapper {
+    border: 1px solid rgba(46, 29, 114, 0.4);
+    border-radius: var(--border-radius-xl);
+    padding: 30px 20px 10px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--c-meteorite-400);
+  }
+
+  &-item {
+    border-top: 1px solid rgba(46, 29, 114, 0.2);
+    cursor: pointer;
+
+    &__title {
+      position: relative;
+      padding: 32px 0;
+      font-size: 18px;
+      text-transform: uppercase;
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: currentColor;
+        transition: .2s;
+      }
+      &:before {
+        right: 0;
+        width: 20px;
+        height: 2px;
+      }
+      &:after {
+        right: 9px;
+        width: 2px;
+        height: 20px;
+      }
+    }
+
+  }
+
+  &-cnt {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 32px;
+
+    &__row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    &__info {
+      font-weight: 500;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+
+  }
+
+  &-shedule {
+    &__row {
+      display: flex;
+      gap: 40px;
+      padding: 6px 0px;
+      border-top: 1px solid var(--c-black-400);
+    }
+    &__time {
+      font-weight: 500;
+    }
+  }
+
+  &-item_active {
+    .accordion-item__title:after {
+      opacity: 0;
+    }
+    .accordion-content {
+      opacity: 1;
+    }
+  }
+
+  @media (min-width: breakpoints.$md) {
+
+    &-item {
+      &__title {
+        font-size: 32px;
+      }
+    }
+
+    &-cnt {
+      &__row {
+        display: grid;
+        grid-template-columns: 160px 1fr;
+      }
+    }
+  }
+
+  @media (min-width: breakpoints.$xl) {
+
+    &__title {
+      font-size: 16px;
+    }
+
+    &__wrapper {
+      padding: 60px 80px 20px 80px;
+    }
+
+    &-item {
+      &__title {
+        padding: 40px 0;
+        font-size: 42px;
+      }
+    }
+
+    &-cnt {
+      padding-bottom: 40px;
+      &__row {
+        grid-template-columns: 280px 620px;
+      }
+      &__info {
+        font-size: 26px;
+      }
+      &__price {
+        font-size: 26px;
+      }
+    }
+
+    &-shedule {
+      &__row {
+        gap: 60px;
+      }
+      &__time {
+        font-size: 20px;
+      }
+    }
+
+  }
+
+
+
+}

@@ -24,6 +24,7 @@
 			background: #fff;
 			transition: .2s;
 			border-radius: 12px;
+			box-shadow: -3px 3px 8px 1px rgba(0, 0, 255, 0.1);
 			&_active {
 				transform: translateX(0);
 			}
