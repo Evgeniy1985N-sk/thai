@@ -1,13 +1,8 @@
 <script setup lang="ts">
-  import { defineProps } from 'vue';
-
-  const props = defineProps<{
-    background: string;
-  }>();
 </script>
 
 <template>
-  <section class="intro" :style="{ backgroundImage: `url(${props.background})` }"></section>
+  <section class="intro"></section>
 </template>
 
 <style lang="scss" scoped>

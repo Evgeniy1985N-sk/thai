@@ -167,10 +167,18 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    &__wrapper-text.active {
+      p:last-child {
+        -webkit-line-clamp: unset;
+      }
+      .reviews-comment__more {
+        display: none;
+      }
+    }
     &__text {
       display: grid;
       gap: 16px;
-      p {
+      p:last-child {
         font-size: var(--font-size-md);
         overflow: hidden;
         text-overflow: ellipsis;

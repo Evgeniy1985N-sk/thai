@@ -1,7 +1,3 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
   <section class="reviews">
     <div class="container">
@@ -144,7 +140,7 @@
               </div>
 
               <div class="reviews__comment reviews-comment">
-                <div class="reviews-comment__wrapper-text">
+                <div class="reviews-comment__wrapper-text" :class="{ active: isActive }">
                   <div class="reviews-comment__text">
                     <p>
                       Трансфер приехал в назначенное время, подобрали несколько человек из отелей по пути и добрались до назначенного места. 
@@ -153,7 +149,7 @@
                       которые потом благополучно съели, помимо них было еще что поесть, чай, кофе, вода. Рекомендую однозначно
                     </p>
                   </div>
-                  <div class="reviews-comment__more">
+                  <div class="reviews-comment__more" @click="setActive">
                     Читать полностью
                   </div>
                 </div>
@@ -210,13 +206,13 @@
               </div>
 
               <div class="reviews__comment reviews-comment">
-                <div class="reviews-comment__wrapper-text">
+                <div class="reviews-comment__wrapper-text" :class="{ active: isActive }">
                   <div class="reviews-comment__text">
                     <p>
                       Мы брали расширенную экскурсию, не пожалели. Организация отличная, без задержек. Слоников много, приготовили корм, кормили много, мыли, купали, плюс купание со слоном в водоеме. Времени для общения со слонами более чем достаточно, никто никуда не подгоняет. Из удобств, есть душ где ополоснуться, выдают сухие полотенца. Берите на смену сухую одежду. У нас входил обед, плюс мы сами готовили два тайских блюда, как всегда в Тае по максимуму. Нам все очень понравилось, после экскурсии мы выбрали вместо трансфера до отеля ближайший пляж еще там потусили пару часов, встретили закат и поехали  домой на такси, день сложился полноценно, за рекомендацию пляжа отдельное спасибо. На месте нас встречал русскоговорящий гид Дмитрий ( отдельный респект), в беде вас не оставят все подскажут и помогут, сделали кучу фото. Вообщем рекомендую в копилочку эмоций.
                     </p>
                   </div>
-                  <div class="reviews-comment__more">
+                  <div class="reviews-comment__more" @click="setActive">
                     Читать полностью
                   </div>
                 </div>
@@ -269,7 +265,7 @@
               </div>
 
               <div class="reviews__comment reviews-comment">
-                <div class="reviews-comment__wrapper-text">
+                <div class="reviews-comment__wrapper-text" :class="{ active: isActive }">
                   <div class="reviews-comment__text">
                     <p>
                       Огромный восторг от экскурсии. Невероятное тепло от общения с этими удивительными созданиями, у деткй гамма эмоций от "что то я боюсь его" до "стой спокойно, моя бусинка, я тебя помою", очень экологично, нет ощущения "зоопарка" 
@@ -278,7 +274,7 @@
                       Дмитрий замечательно провёл экскурсию, очень внимательный, подробно всё объясняет, фотографировал, мы вообще не заморачивались и получали удовольствие, + бонус - можно перевести оплату на российскую карту, что в наше "смутное" время становится актуальным и удобным
                     </p>
                   </div>
-                  <div class="reviews-comment__more">
+                  <div class="reviews-comment__more" @click="setActive">
                     Читать полностью
                   </div>
                 </div>
@@ -338,13 +334,13 @@
               </div>
 
               <div class="reviews__comment reviews-comment">
-                <div class="reviews-comment__wrapper-text">
+                <div class="reviews-comment__wrapper-text" :class="{ active: isActive }">
                   <div class="reviews-comment__text">
                     <p>
                       Отличный гид, эрудированный, говорит на чистом русском, поэтому подойдет для гостей, которые не говорят по-английски. Сделал массу хороших фотографий, на этой экскурсии самому это сделать зачастую сложно. Рекомендую.
                     </p>
                   </div>
-                  <div class="reviews-comment__more">
+                  <div class="reviews-comment__more" @click="setActive">
                     Читать полностью
                   </div>
                 </div>
@@ -397,13 +393,13 @@
               </div>
 
               <div class="reviews__comment reviews-comment">
-                <div class="reviews-comment__wrapper-text">
+                <div class="reviews-comment__wrapper-text" :class="{ active: isActive }">
                   <div class="reviews-comment__text">
                     <p>
                       Трансфер приехал в назначенное время, подобрали несколько человек из отелей по пути и добрались до назначенного места. Там нас встретил Дмитрий, который позже сопровождал нас на всех станциях, снимал происходящее, рассказывал и объяснял, за что ему огромное спасибо! Слонов кормим, купаем, трем щетками - полный спа. На территории после мастер класс по приготовлению пары тайских блюд, которые потом благополучно съели, помимо них было еще что поесть, чай, кофе, вода. Рекомендую однозначно
                     </p>
                   </div>
-                  <div class="reviews-comment__more">
+                  <div class="reviews-comment__more" @click="setActive">
                     Читать полностью
                   </div>
                 </div>
@@ -423,6 +419,26 @@
     </div>
   </section>
 </template>
+
+
+<script lang="ts">
+
+  export default {
+    data() {
+      return {
+        isActive: false,
+      };
+    },
+    methods: {
+      setActive() {
+        this.isActive = !this.isActive;
+      },
+    },
+
+  };
+
+</script>
+
 
 <style lang="scss" scoped>
   @use '@/assets/components/Reviews.scss';

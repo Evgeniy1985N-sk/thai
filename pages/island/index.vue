@@ -1,10 +1,13 @@
-<style lang="scss">
+<style lang="scss" scoped>
+  .intro {
+    background-image: url('/assets/images/intro-image-island.jpg') !important;
+  }
 </style>
 
 
 <template>
 
-  <Intro2 :background="'/_nuxt/assets/images/intro-image-island.jpg'" />
+  <Intro2 />
 
   <About2 />
 
