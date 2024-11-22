@@ -8,24 +8,46 @@
       <div class="rent__items">
         <div class="rent__item">
           <div class="rent__gallery">
-              <div class="rent__wrapper-img">
-                <img class="rent__img" src="/assets/images/rent-img-1.jpg" alt="">
-              </div>
-              <div class="rent__wrapper-img">
+            <swiper
+              :class="{ 'rent__slider': true }"
+              :slides-per-view="1"
+              :space-between="0"
+              @swiper="onSwiper"
+            >
+              <swiper-slide>
+                  <img class="rent__slider-img" src="/assets/images/rent-img-1.jpg" alt="">
+              </swiper-slide>
+              <swiper-slide>
+                  <img class="rent__slider-img" src="/assets/images/rent-img-2.jpg" alt="">
+              </swiper-slide>
+              <swiper-slide>
+                  <img class="rent__slider-img" src="/assets/images/rent-img-3.jpg" alt="">
+              </swiper-slide>
+              <swiper-slide>
+                  <img class="rent__slider-img" src="/assets/images/rent-img-4.jpg" alt="">
+              </swiper-slide>
+              <swiper-slide>
+                  <img class="rent__slider-img" src="/assets/images/rent-img-5.jpg" alt="">
+              </swiper-slide>
+              <swiper-slide>
+                  <img class="rent__slider-img" src="/assets/images/rent-img-6.jpg" alt="">
+              </swiper-slide>
+            </swiper>
+            <div class="rent__wrapper-img">
                 <img class="rent__img" src="/assets/images/rent-img-2.jpg" alt="">
-              </div>
-              <div class="rent__wrapper-img">
+            </div>
+            <div class="rent__wrapper-img">
                 <img class="rent__img" src="/assets/images/rent-img-3.jpg" alt="">
-              </div>
-              <div class="rent__wrapper-img">
+            </div>
+            <div class="rent__wrapper-img">
                 <img class="rent__img" src="/assets/images/rent-img-4.jpg" alt="">
-              </div>
-              <div class="rent__wrapper-img">
+            </div>
+            <div class="rent__wrapper-img">
                 <img class="rent__img" src="/assets/images/rent-img-5.jpg" alt="">
-              </div>
-              <div class="rent__wrapper-img">
+            </div>
+            <div class="rent__wrapper-img">
                 <img class="rent__img" src="/assets/images/rent-img-6.jpg" alt="">
-              </div>
+            </div>
           </div>
           <div class="rent__content">
             <div class="rent__content-title">
@@ -123,10 +145,23 @@
         </div>
         <div class="rent__item">
           <div class="rent__gallery">
-              <div class="rent__wrapper-img">
-                <img class="rent__img" src="/assets/images/rent-img-7.jpg" alt="">
-              </div>
-              <div class="rent__wrapper-img">
+            <swiper
+              :class="{ 'rent__slider': true }"
+              :slides-per-view="1"
+              :space-between="0"
+              @swiper="onSwiper"
+            >
+              <swiper-slide>
+                  <img class="rent__slider-img" src="/assets/images/rent-img-7.jpg" alt="">
+              </swiper-slide>
+              <swiper-slide>
+                  <img class="rent__slider-img" src="/assets/images/rent-img-8.jpg" alt="">
+              </swiper-slide>
+              <swiper-slide>
+                  <img class="rent__slider-img" src="/assets/images/rent-img-9.jpg" alt="">
+              </swiper-slide>
+            </swiper>
+            <div class="rent__wrapper-img">
                 <img class="rent__img" src="/assets/images/rent-img-8.jpg" alt="">
               </div>
               <div class="rent__wrapper-img">
@@ -229,24 +264,46 @@
         </div>
         <div class="rent__item">
           <div class="rent__gallery">
-              <div class="rent__wrapper-img">
-                <img class="rent__img" src="/assets/images/rent-img-10.jpg" alt="">
-              </div>
-              <div class="rent__wrapper-img">
-                <img class="rent__img" src="/assets/images/rent-img-11.jpg" alt="">
-              </div>
-              <div class="rent__wrapper-img">
-                <img class="rent__img" src="/assets/images/rent-img-12.jpg" alt="">
-              </div>
-              <div class="rent__wrapper-img">
-                <img class="rent__img" src="/assets/images/rent-img-13.jpg" alt="">
-              </div>
-              <div class="rent__wrapper-img">
-                <img class="rent__img" src="/assets/images/rent-img-14.jpg" alt="">
-              </div>
-              <div class="rent__wrapper-img">
-                <img class="rent__img" src="/assets/images/rent-img-15.jpg" alt="">
-              </div>
+            <swiper
+              :class="{ 'rent__slider': true }"
+              :slides-per-view="1"
+              :space-between="0"
+              @swiper="onSwiper"
+            >
+              <swiper-slide>
+                <img class="rent__slider-img" src="/assets/images/rent-img-10.jpg" alt="">
+              </swiper-slide>
+              <swiper-slide>
+                  <img class="rent__slider-img" src="/assets/images/rent-img-11.jpg" alt="">
+              </swiper-slide>
+              <swiper-slide>
+                  <img class="rent__slider-img" src="/assets/images/rent-img-12.jpg" alt="">
+              </swiper-slide>
+              <swiper-slide>
+                  <img class="rent__slider-img" src="/assets/images/rent-img-13.jpg" alt="">
+              </swiper-slide>
+              <swiper-slide>
+                  <img class="rent__slider-img" src="/assets/images/rent-img-14.jpg" alt="">
+              </swiper-slide>
+              <swiper-slide>
+                  <img class="rent__slider-img" src="/assets/images/rent-img-15.jpg" alt="">
+              </swiper-slide>
+            </swiper>
+            <div class="rent__wrapper-img">
+              <img class="rent__img" src="/assets/images/rent-img-11.jpg" alt="">
+            </div>
+            <div class="rent__wrapper-img">
+              <img class="rent__img" src="/assets/images/rent-img-12.jpg" alt="">
+            </div>
+            <div class="rent__wrapper-img">
+              <img class="rent__img" src="/assets/images/rent-img-13.jpg" alt="">
+            </div>
+            <div class="rent__wrapper-img">
+              <img class="rent__img" src="/assets/images/rent-img-14.jpg" alt="">
+            </div>
+            <div class="rent__wrapper-img">
+              <img class="rent__img" src="/assets/images/rent-img-15.jpg" alt="">
+            </div>
           </div>
           <div class="rent__content">
             <div class="rent__content-title">

@@ -86,15 +86,14 @@
     }
 
     &__dsc {
+      max-width: 1000px;
+      margin-inline: auto;
       font-size: 20px;
       p {
-        max-width: 1000px;
-        margin-inline: auto;
+        text-indent: var(--text-indent);
       }
-      span {
+      br {
         display: block;
-        max-width: var(--custom-width);
-        margin-left: auto;
       }
     }
 
@@ -190,6 +189,7 @@
       &__title {
         margin-bottom: 20px;
         font-size: 26px;
+        line-height: 140%;
       }
       &__row {
         grid-template-columns: 180px 1fr;
@@ -197,24 +197,30 @@
       }
       &__name {
         font-size: 18px;
+        line-height: 140%;
       }
       &__text {
         max-width: 390px;
         font-size: 18px;
+        line-height: 140%;
       }
     }
   }
 
-  @media (min-width: breakpoints.$xl) {
+  @media (min-width: breakpoints.$xxl) {
     &-items {
       grid-template-columns: repeat(3,1fr);
       gap: 20px;
+    }
+    &-item {
+      min-height: 270px;
     }
   }
 }
 
 .tag-box {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 4px;
   &__name {
@@ -229,7 +235,8 @@
   @media (min-width: breakpoints.$md) {
     &__name {
       padding: 6px 20px;
-      font-size: 10px;
+      font-size: 16px;
+      line-height: 140%;
     }
   }
 }

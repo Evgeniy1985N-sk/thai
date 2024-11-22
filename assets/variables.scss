@@ -36,13 +36,26 @@
     --font-size-xl: 20px;
     --font-size-xxl: 24px;
 
-    --container-width: 1440px;
-
+    --container-width: 1024px;
 
     --custom-width: calc(100% - 100% / 6 - 10px);
 
-  @media (min-width: breakpoints.$xxxl) {
+    --text-indent: 0;
+
+
+    @media (min-width: breakpoints.$md) {
+        --text-indent: calc(100% / 6 - -10px);
+    }
+
+    @media (min-width: breakpoints.$xxl) {
+        --container-width: 1300px;
+        --text-indent: 90px;
+    }
+
+    @media (min-width: breakpoints.$xxxl) {
         --custom-width: calc(100% - 100% / 4 - 10px);
+        --container-width: 1440px;
+        --text-indent: 160px;
     }
 }
 

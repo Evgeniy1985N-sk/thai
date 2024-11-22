@@ -34,8 +34,16 @@
     gap: 10px;
   }
 
-  &__wrapper-img:first-child {
+  &__slider {
     grid-column: span 5;
+    width: 100%;
+    min-width: 0;
+    height: 230px;
+    &-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   &__wrapper-img:nth-child(6) {
@@ -56,6 +64,7 @@
   &__img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
   }
 
   &__content-title {
@@ -148,6 +157,10 @@
       gap: 60px;
     }
 
+    &__slider {
+      height: 420px;
+    }
+
     &-table {
       &__head {
         grid-template-columns: 160px 90px 90px;
@@ -190,6 +203,9 @@
         padding: 0;
         border: 0;
       }
+    }
+    &__slider {
+      height: 500px;
     }
     &__content-title {
       font-size: 32px;
